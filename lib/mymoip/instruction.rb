@@ -50,6 +50,7 @@ module MyMoip
                   n5.MaximoParcelas(installments[:max])
                   n5.Repassar(installments[:forward_taxes])
                   n5.Juros(installments[:fee])
+                  n5.Recebimento(installments[:receive])
                 end
               end
             end
