@@ -48,9 +48,7 @@ module MyMoip
                 n4.Parcelamento do |n5|
                   n5.MinimoParcelas(installments[:min])
                   n5.MaximoParcelas(installments[:max])
-                  if installments[:forward_taxes]
-                    n5.Repassar(installments[:forward_taxes])
-                  end
+                  n5.Repassar(installments[:forward_taxes])
                   n5.Juros(installments[:fee])
                 end
               end
