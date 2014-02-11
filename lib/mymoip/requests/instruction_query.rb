@@ -4,16 +4,13 @@ module MyMoip
     debug_output $stderr
 
     attr_reader :token, :response, :payment
-    base_uri "https://www.moip.com.br"
-    #base_uri Rails.env == "production" ? "https://www.moip.com.br" : "https://desenvolvedor.moip.com.br/sandbox"
+    base_uri Rails.env == "production" ? "https://www.moip.com.br" : "https://desenvolvedor.moip.com.br/sandbox"
 
     def initialize(token)
       @token = token
       @auth = {
         username: MyMoip.token,
         password: MyMoip.key
-        #username: "J05DN1OGT3U95MEPCM3IDCVXUCIKIIYS",
-        #password: "T4G88BSAFLEQZXTCWVUWSJLYDDL9X47ATRLI01RN"
       }
     end
 
